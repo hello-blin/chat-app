@@ -18,7 +18,8 @@ app.get("/api/chat", (req, res) => {
 
 app.get("/api/chat/:id", (req, res) => {
 //   res.send(req.params.chatName);
-
+    const singleChat = chats.find(c=>c.id = req.params.id);
+    res.send(singleChat)
 });
 
 app.listen(3000, () => {
